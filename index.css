@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image:url("https://towardfreedom.org/wp-content/uploads/2017/10/Abyei-Timeline-2.jpg"); */
+  /* background-image:url("https://qz.com/wp-content/uploads/2018/01/rtx24tf2-e1517296678589.jpg?quality=80&strip=all&w=4132");*/    
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  /* background-color: #eff0f1; */
+  overflow: auto;
+  background-image: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(https://qz.com/wp-content/uploads/2018/01/rtx24tf2-e1517296678589.jpg?quality=80&strip=all&w=4132);
+  /*min-width: 100px;*/
+ }
+ 
+.nations-container {
+    text-align: center;
+    margin: 50px auto;
+    /* width: 100%; */
+}
+
+.start {
+    background-color: #ccc;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+    width: 25%;
+    margin: 10px;
+    height: 100px;
+    line-height: 100px;
+    min-width: 200px;
+    border-radius: 10px;
+    white-space: nowrap;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    display: inline-block;
+} 
+
+.start:hover {
+    background-color: orange;
+    opacity: 1;
+    cursor: pointer;
+}
+
+h1, h2 {
+  text-align:center;
+  font-family: 'Russo One', sans-serif;
+
+  /* font-family: 'Patua One', cursive;
+ serif; */
+  font-weight: 600;
+  color: white;
+  /* text-transform: uppercase; */
+  font-size: 3em;
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
+}
+
+a, a:link, a:active, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+.card { 
+  border-radius: 10px;
+  color: white;
+  border-bottom: 10px solid orange;
+  /* background-color: #ccc;   */
+  /* background-color: #242425; */
+  background-color: black;
+  background-position: center center;
+  padding: 10px;
+  margin: 50px 3%;
+  width: 27%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+@media screen and (max-width: 1000px) {
+  .card{ 
+    margin: 50px 3%;
+    width: 44%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card{ 
+    margin: 50px 10%;
+    width: 80%;
+  }
+}
+
+.result-menu {
+  width: 100%;
+  color: white;
+  font-family: 'Russo One', sans-serif;
+  text-align:center;
+}
+
+.container{
+    min-width: 100px
+}
+  
+.image-container {
+  height: 200px;
+  background-size: cover;
+  border-radius: 10px;
+}
+  
+.news-title {
+  font-family: 'Russo One', sans-serif;
+  font-size: 120%;
+  height: 150px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.description {
+  height: 100px;
+  word-wrap: nowrap;
+  font-size: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.source-container {
+  position: absolute;
+  bottom: 0;
+}
+
+.source {
+  bottom: 0;
+  word-wrap: break-word;
+}
+
+
+/* Next Buttons */
+
+a.round {
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+a.round:hover {
+    background-color: black;
+    color: orange;
+}
+
+.previous {
+    background-color: orange;
+    color: black;
+}
+
+.next {
+    background-color: orange;
+    color: black;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+/* .hidden {
+  margin: 0 auto;
+} */
+
+.page{
+  height:200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.clear{
+  clear:both;
+}
