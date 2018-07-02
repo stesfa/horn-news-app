@@ -65,7 +65,14 @@ h1, h2 {
 }
 
 p {
+
   font-family: 'Roboto Slab', serif;
+}
+
+p.info {
+  text-align:center;
+  color:white;
+  font-family: 'Russo One', sans-serif;
 }
 
 a, a:link, a:active, a:visited {
