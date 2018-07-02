@@ -77,6 +77,7 @@ function displayNewsAPISearchData(data) {
 function watchClickStart() {
     $('body').on('click','.start', function(){
       $('.nations-container').hide();
+      $('.info').hide();
       state.query = $(this).attr("id")
       getDataFromApi(state.query);
   })
