@@ -12,6 +12,7 @@ const DEFAULT_IMAGES = {
   "somalia": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Somalia_-_Location_Map_%282011%29_-_SOM_-_UNOCHA.svg",
   "south-sudan": "https://upload.wikimedia.org/wikipedia/commons/5/5f/South_Sudan_-_Location_Map_%282012%29_-_SSD_-_UNOCHA.svg",
   "sudan": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Sudan_-_Location_Map_%282011%29_-_SDN_-_UNOCHA.svg",
+  "uganda": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Uganda_-_Location_Map_%282013%29_-_UGA_-_UNOCHA.svg",
 }
 
 
@@ -50,12 +51,12 @@ function handleButtons(data){
 function renderResult(result) {
   let image = (result.urlToImage) ? result.urlToImage: DEFAULT_IMAGES[state.query];
   return `
-    <div class="card w3-animate-opacity" aria-live>
+    <div class="card" aria-live>
       <a href="${result.url}" target="_blank">
         <div class="image-container container" style="background-image: url(${image})">
         </div>
       </a>
-      <div class="news-title"><a href="${result.url}" target="_blank">${result.title}</a></div>
+      <div class="news-title"><a href="${result.url}" target="_blank" class="title-link">${result.title}</a></div>
       <div class="description-container container">
         <p class="description">${result.description}</p>
       </div>
@@ -68,10 +69,11 @@ function renderResult(result) {
 
 function displayNewsAPISearchData(data) {
   const results = data.articles.map((article, index) => renderResult(article));
-  // const clear = `<div class="clear"></div>`
+  const clear = `<div class="clear"></div>`
   $('.result-menu').show()
   $('.result-menu').html(`Results For: "${state.query.charAt(0).toUpperCase() + state.query.slice(1)}" `)
-  $('.js-search-results').html(results);
+  $('.js-search-results').html(results.join("")+clear);
+  $('.card').addClass('animated fadeIn')
 }
 
 function watchClickStart() {

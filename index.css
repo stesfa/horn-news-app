@@ -9,12 +9,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
-  /* background-color: #eff0f1; */
   overflow: auto;
   background-image: 
       linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
       ),
       url(https://qz.com/wp-content/uploads/2018/01/rtx24tf2-e1517296678589.jpg?quality=80&strip=all&w=4132);
   /*min-width: 100px;*/
@@ -28,8 +27,9 @@ body {
 
 .start {
     background-color: #ccc;
-    opacity: 0.8;
-    filter: alpha(opacity=50);
+    background: rgb(204, 204, 204); /*for older browsers*/
+    background: rgba(204, 204, 204, 0.7);
+    /*filter: alpha(opacity=50);*/
     width: 25%;
     margin: 10px;
     height: 100px;
@@ -55,17 +55,13 @@ body {
 h1, h2 {
   text-align:center;
   font-family: 'Russo One', sans-serif;
-
-  /* font-family: 'Patua One', cursive;
- serif; */
+  text-shadow: 0 1px 1px black;
   font-weight: 600;
   color: white;
-  /* text-transform: uppercase; */
   font-size: 3em;
 }
 
 p {
-
   font-family: 'Roboto Slab', serif;
 }
 
@@ -87,11 +83,11 @@ a:hover {
 
 .card { 
   border-radius: 10px;
-  color: white;
+  color: black;
   border-bottom: 10px solid orange;
   /* background-color: #ccc;   */
   /* background-color: #242425; */
-  background-color: black;
+  background-color: white;
   background-position: center center;
   padding: 10px;
   margin: 50px 3%;
@@ -139,6 +135,16 @@ a:hover {
   height: 150px;
   overflow: hidden;
   padding: 10px;
+  color: black;
+}
+
+a.title-link {
+  color: black;
+}
+
+a.title-link:hover {
+    color: orange;
+    text-decoration: none;
 }
 
 .description {
@@ -186,16 +192,91 @@ a.round:hover {
     border-radius: 50%;
 }
 
-/* .hidden {
-  margin: 0 auto;
-} */
-
-.page{
-  height:200px;
-  margin: 20px auto;
+.page {
+  height:10px;
+  margin: 0px auto;
   text-align: center;
+  padding-bottom: 50px;
 }
+
+/*Clear the Next/Previous Toggle Div*/
 
 .clear{
   clear:both;
+}
+
+/*FadeIn*/
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/*FadeInUp*/
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
