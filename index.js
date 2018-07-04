@@ -69,11 +69,11 @@ function renderResult(result, index) {
 function displayNewsAPISearchData(data) {
   const results = data.articles.map((article, index) => renderResult(article, index));
   const clear = `<div class="clear"></div>`
-  $('.result-info').show()
-  $('.result-info').html(`Results For: "${state.query.charAt(0).toUpperCase() + state.query.slice(1)}" `)
-  $('.js-search-results').attr('role', 'list')
+  $('.result-info').show();
+  $('.result-info').html(`Results For: "${state.query.charAt(0).toUpperCase() + state.query.slice(1)}" `);
+  $('.js-search-results').attr('role', 'list');
   $('.js-search-results').html(results.join("")+clear);
-  $('.card').addClass('animated fadeIn')
+  $('.card').addClass('animated fadeIn');
 }
 
 function watchClickStart() {
@@ -100,9 +100,9 @@ function watchClickPrevious() {
 }
 
 $(function() {
-  watchClickStart()
-  watchClickNext()
-  watchClickPrevious()
+  watchClickStart();
+  watchClickNext();
+  watchClickPrevious();
 });
 
 
