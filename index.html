@@ -19,28 +19,28 @@
 <body class="animated fadeIn">
     </head>
     <body>
-      <main>
+      <main role="main" class="js-output">
         <h1><a href="index.html">Horn of Africa News Search</a></h1>
         <p class="info">The lastest news this week about each country in the Horn of Africa. Pick a country to begin!</p>
 
-          <div class='nations-container'>
-          <div id="djibouti" class="start animated fadeInUp">Djibouti</div>
-          <div id="eritrea" class="start animated fadeInUp">Eritrea</div>
-          <div id="ethiopia" class="start animated fadeInUp">Ethiopia</div>
-          <div id="kenya" class="start animated fadeInUp">Kenya</div>
-          <div id="somalia" class="start animated fadeInUp">Somalia</div>
-          <div id="south-sudan" class="start animated fadeInUp">South Sudan</div>
-          <div id="sudan" class="start animated fadeInUp">Sudan</div>
-          <div id="uganda" class="start animated fadeInUp">Uganda</div>
+          <div class="nations-container">
+          <div id="djibouti" class="start animated fadeInUp" role="button">Djibouti</div>
+          <div id="eritrea" class="start animated fadeInUp" role="button">Eritrea</div>
+          <div id="ethiopia" class="start animated fadeInUp" role="button">Ethiopia</div>
+          <div id="kenya" class="start animated fadeInUp" role="button">Kenya</div>
+          <div id="somalia" class="start animated fadeInUp" role="button">Somalia</div>
+          <div id="south-sudan" class="start animated fadeInUp" role="button">South Sudan</div>
+          <div id="sudan" class="start animated fadeInUp" role="button">Sudan</div>
+          <div id="uganda" class="start animated fadeInUp" role="button">Uganda</div>
           </div>
           
-          <div class="result-menu" hidden><span class="home"></span><span></span></div>
+          <div class="result-info" aria-live="polite" hidden><span class="home"></span><span></span></div>
 
-          <div class="js-search-results"></div>
+          <div class="js-search-results" aria-live="assertive"></div>
 
-          <div class="page">
-            <a href="#" class="previous round" hidden>&#8249;</a>
-            <a href="#" class="next round" hidden>&#8250;</a>
+          <div class="page" aria-live="polite">
+            <a href="#" class="previous round" role="button" hidden>&#8249;</a>
+            <a href="#" class="next round" role="button" hidden>&#8250;</a>
           </div>
 
       </main>

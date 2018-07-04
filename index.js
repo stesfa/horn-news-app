@@ -31,7 +31,6 @@ function getDataFromApi(searchTerm, callback) {
   $.getJSON(NEWS_API_URL, query, getDataSuccess);
 }
 
-
 function getDataSuccess(data){
   displayNewsAPISearchData(data);
   handleButtons(data);
@@ -48,15 +47,15 @@ function handleButtons(data){
   }; 
 }
 
-function renderResult(result) {
+function renderResult(result, index) {
   let image = (result.urlToImage) ? result.urlToImage: DEFAULT_IMAGES[state.query];
   return `
-    <div class="card" aria-live>
-      <a href="${result.url}" target="_blank">
-        <div class="image-container container" style="background-image: url(${image})">
+    <div class="card number-${index}" role="listitem">
+      <a href="${result.url}" target="_blank" alt="Link_to_${result.url}">
+        <div class="image-container container" role="img" alt="article image" aria-label="article_image" style="background-image: url(${image})">
         </div>
       </a>
-      <div class="news-title"><a href="${result.url}" target="_blank" class="title-link">${result.title}</a></div>
+      <div class="headline"><a href="${result.url}" target="_blank" class="title-link">${result.title}</a></div>
       <div class="description-container container">
         <p class="description">${result.description}</p>
       </div>
@@ -68,10 +67,11 @@ function renderResult(result) {
 }
 
 function displayNewsAPISearchData(data) {
-  const results = data.articles.map((article, index) => renderResult(article));
+  const results = data.articles.map((article, index) => renderResult(article, index));
   const clear = `<div class="clear"></div>`
-  $('.result-menu').show()
-  $('.result-menu').html(`Results For: "${state.query.charAt(0).toUpperCase() + state.query.slice(1)}" `)
+  $('.result-info').show()
+  $('.result-info').html(`Results For: "${state.query.charAt(0).toUpperCase() + state.query.slice(1)}" `)
+  $('.js-search-results').attr('role', 'list')
   $('.js-search-results').html(results.join("")+clear);
   $('.card').addClass('animated fadeIn')
 }
@@ -80,7 +80,7 @@ function watchClickStart() {
     $('body').on('click','.start', function(){
       $('.nations-container').hide();
       $('.info').hide();
-      state.query = $(this).attr("id")
+      state.query = $(this).attr("id");
       getDataFromApi(state.query);
   })
 }

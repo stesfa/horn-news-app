@@ -112,7 +112,7 @@ a:hover {
   }
 }
 
-.result-menu {
+.result-info {
   width: 100%;
   color: white;
   font-family: 'Russo One', sans-serif;
@@ -129,7 +129,7 @@ a:hover {
   border-radius: 10px;
 }
   
-.news-title {
+.headline {
   font-family: 'Russo One', sans-serif;
   font-size: 120%;
   height: 150px;
