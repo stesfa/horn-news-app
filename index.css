@@ -179,18 +179,24 @@ a.round:hover {
 }
 
 .previous {
+    font-family: 'Russo One', sans-serif;
     background-color: orange;
     color: black;
+    width: 10px;
+    border-radius: 10px;
 }
 
 .next {
+    font-family: 'Russo One', sans-serif;
     background-color: orange;
     color: black;
+    width: 10px;
+    border-radius: 10px;
 }
 
-.round {
+/*.round {
     border-radius: 50%;
-}
+}*/
 
 .page {
   height:10px;
