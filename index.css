@@ -3,8 +3,6 @@
 }
 
 body {
-  /* background-image:url("https://towardfreedom.org/wp-content/uploads/2017/10/Abyei-Timeline-2.jpg"); */
-  /* background-image:url("https://qz.com/wp-content/uploads/2018/01/rtx24tf2-e1517296678589.jpg?quality=80&strip=all&w=4132");*/    
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -16,20 +14,17 @@ body {
         rgba(0, 0, 0, 0.2)
       ),
       url(https://qz.com/wp-content/uploads/2018/01/rtx24tf2-e1517296678589.jpg?quality=80&strip=all&w=4132);
-  /*min-width: 100px;*/
  }
  
 .nations-container {
     text-align: center;
     margin: 50px auto;
-    /* width: 100%; */
 }
 
 .start {
     background-color: #ccc;
     background: rgb(204, 204, 204); /*for older browsers*/
     background: rgba(204, 204, 204, 0.7);
-    /*filter: alpha(opacity=50);*/
     width: 25%;
     margin: 10px;
     height: 100px;
@@ -85,8 +80,6 @@ a:hover {
   border-radius: 10px;
   color: black;
   border-bottom: 10px solid orange;
-  /* background-color: #ccc;   */
-  /* background-color: #242425; */
   background-color: white;
   background-position: center center;
   padding: 10px;
@@ -128,7 +121,7 @@ a:hover {
   background-size: cover;
   border-radius: 10px;
 }
-  
+
 .headline {
   font-family: 'Russo One', sans-serif;
   font-size: 120%;
@@ -165,7 +158,6 @@ a.title-link:hover {
   word-wrap: break-word;
 }
 
-
 /* Next Buttons */
 
 a.round {
@@ -193,10 +185,6 @@ a.round:hover {
     width: 10px;
     border-radius: 10px;
 }
-
-/*.round {
-    border-radius: 50%;
-}*/
 
 .page {
   height:10px;
